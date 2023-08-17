@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json())
 app.use(
     cors({
-      origin: "http://localhost:5173", // Replace with the correct URL of your frontend
+      origin: "https://reidreviews.netlify.app", // Replace with the correct URL of your frontend
       credentials: true, // Enable credentials (cookies, authorization headers, etc.)
     })
   );
@@ -20,7 +20,7 @@ app.use(
 app.use(cookieParser());
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, "../client/public/upload");
+    cb(null, "/uploads");
   },
   filename: function (req, file, cb) {
     cb(null, Date.now() + file.originalname);
