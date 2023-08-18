@@ -26,4 +26,4 @@ function performQuery(query, values, callback) {
             callback(null, results);
         });
     });
-}
+} export default performQuery;
