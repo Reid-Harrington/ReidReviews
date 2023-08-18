@@ -1,4 +1,4 @@
-import { db } from "../db.js"
+import performQuery from "../db.js"
 import  jwt  from "jsonwebtoken";
 
 
@@ -13,7 +13,7 @@ export const addPfp = (req,res) => {
     
     const q = "UPDATE users SET img = ? WHERE id = ?"
     console.log([req.body.uimg][0])
-    db.query(q,[req.body.uimg, req.body.id], (err,data) =>{
+    performQuery(q,[req.body.uimg, req.body.id], (err,data) =>{
         if (err)
         {
             console.log(err);

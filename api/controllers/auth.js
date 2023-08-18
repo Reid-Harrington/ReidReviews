@@ -1,4 +1,4 @@
-import {db} from "../db.js";
+import performQuery from "../db.js";
 import bycrypt from "bcryptjs"
 import  jwt  from "jsonwebtoken";
 export const register = (req,res) =>
@@ -6,7 +6,7 @@ export const register = (req,res) =>
     //check existing user 
     const q = "SELECT * FROM users WHERE email= ? OR username = ?"
 
-    db.query(q,[req.body.email, req.body.username], (err,data) => {
+    performQuery(q,[req.body.email, req.body.username], (err,data) => {
         if (err) return res.json(err)
         if (data.length) return res.status(409).json("User already exists")
 
@@ -21,7 +21,7 @@ export const register = (req,res) =>
 
         ]
 
-        db.query(q,[values],(err,data) => {
+        performQuery(q,[values],(err,data) => {
             if (err) return res.json(err)
             return res.status(200).json("user has been created")
 
@@ -32,7 +32,7 @@ export const register = (req,res) =>
 export const login = (req,res) =>{
    
     const q = "SELECT * FROM users WHERE username = ?"
-    db.query(q,[req.body.username], (err, data) => {
+    performQuery(q,[req.body.username], (err, data) => {
          //check if user exists
         if (err)
         {
