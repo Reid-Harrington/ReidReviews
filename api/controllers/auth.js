@@ -55,6 +55,7 @@ export const login = (req,res) =>{
         res.cookie("access_token", token, {
             httpOnly: true,
             sameSite:"none",
+            domain: "https://reidreviews.netlify.app",
         }).status(200).json(other);
 
         console.log(other)
