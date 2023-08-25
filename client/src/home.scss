@@ -1,0 +1,195 @@
+.home 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  
+    h1 
+    {
+      color: #72487c; 
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+  
+    h2 
+    {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  
+    h3 
+    {
+      font-size: 18px;
+      color: #777;
+      margin-bottom: 40px;
+    }
+  
+    .content-wrapper 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        flex: 1;
+        max-width: 50%; // Adjust the width as needed
+        margin-right: 20px;
+        p 
+        {
+          margin-bottom: 15px;
+        }
+        .image-section 
+        {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+
+            .image 
+            {
+            max-width: 100%; // Adjust the width as needed
+            height: auto;
+            border: 1px solid #ddd;
+            }
+        }
+    }
+
+    .posts 
+    {
+        margin-left: 30px;
+        margin-top: 120px ;
+        overflow: auto;
+
+        .grid 
+        {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 -10px; /* Adjust spacing between posts */
+        }
+        .post 
+        {
+            width: calc(33.33% - 20px); /* 3 posts per row */
+            margin: 0 10px; /* Adjust spacing between posts */
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            
+            .img 
+            {
+                img 
+                {
+                height: 350px;
+                width: 270px;
+                border-radius: 20px;
+                }
+            }
+
+            .content 
+            {
+                padding: 10px;
+                .link 
+                {
+                    text-decoration: none;
+                    color: white;
+                    h1 
+                    {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                p 
+                {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    color: rgb(172, 172, 172);
+                }
+
+                button 
+                {
+                    background-color: #57385f;
+                    color: #fff;
+                    border: none;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    @media (max-width: 812px) 
+    {
+        width: 100%;
+        h1 {
+        color: #72487c; 
+        font-size: 40px;
+        margin-bottom: 20px;
+        }
+        .posts 
+        {
+        //margin-left: 30px;
+        margin-top: 120px ;
+            .grid {
+            width: 50vh;
+            display: flex;
+            //align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 10px; /* Adjust spacing between posts */
+            margin-bottom: 30px;
+
+            }
+
+            .post {
+                width: calc(43.33% ); /* 3 posts per row */
+                margin: 0 5px; /* Adjust spacing between posts */
+                margin-bottom: 20px;
+                border-radius: 15px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                display: flex;
+                .img 
+                {
+                    img 
+                    {
+                    height: 250px;
+                    width: 200px;
+                    border-radius: 20px;
+                    }
+                }
+            }
+            .content 
+            {
+                padding: 10px;
+
+                .link 
+                {
+                    text-decoration: none;
+                    color: white;
+                    h1 
+                    {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                p 
+                {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    color: rgb(172, 172, 172);
+                }
+
+                button 
+                {
+                background-color: #57385f;
+                color: #fff;
+                border: none;
+                padding: 5px 10px;
+                cursor: pointer;
+                }
+            }
+        }
+    }
+}

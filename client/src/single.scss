@@ -1,0 +1,188 @@
+
+.single
+{
+    gap: 50px;
+    color: white;
+
+    .content 
+    {
+        margin:5px;
+        display: flex;
+        flex-direction: column;
+        // gap: 30px;
+        .image-container 
+        {
+            display: flex;
+            gap: 20px;
+            img 
+            {
+                width: 350px;
+                height: 450px;
+                border-radius: 10px;
+            }
+            .txtContent 
+            {
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+
+                .caption 
+                {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                h1 
+                {
+                    font-size: 52px;
+                    color: #a765b8;
+                }
+                p 
+                {
+                    width: 860px;
+                    //height: 200px;
+                    margin-left: -2px;
+                    //margin-bottom: 400px;
+                    color: white;
+                    text-align: justify;
+                    //line-height: 30px;
+                }
+                .content
+                {
+                    width: 900px;
+                    height: 200px;
+                    margin-left: 20px;
+                    
+                    font-size: 18px;
+                    color: white;
+                    text-align: justify;
+                    line-height: 45px;
+                }
+            }
+        }
+        .user 
+        {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            img 
+            {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            span 
+            {
+                font-weight: bold;
+            }
+            .edit 
+            {
+                display: flex;
+                gap: 5px;
+                img 
+                {
+                    width: 20px;
+                    height: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: 900px) 
+{
+    .single
+    {
+        .content
+        {
+            gap: 5px;
+            .image-container 
+            {
+                gap: 5px;                
+                display: block;
+                img 
+                {
+                    width: 150px;
+                    height: 200px;
+                }
+                .txtContent 
+                {
+                    
+                    gap:5px;
+                    width: 50vh;
+                    .caption 
+                    {
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                    h1 
+                    {
+                        font-size: 22px;
+                        color: #a765b8;
+                    }
+                    p 
+                    {
+                        //height: 200px;
+                        margin-left: 20px;
+
+                        color: white;
+                        //text-align: justify;
+                        //line-height: 30px;
+                    }
+                    .content
+                    {
+                        
+                        width: 92%;
+                        height: 100%;
+                        margin-left: -16px;
+                        margin-bottom: 65px;
+                        p
+                        {
+                            max-width: 100%;
+                            font-size: 18px;
+                            color: white;
+                            text-align: justify;
+                            line-height: 45px;
+                        }
+
+                    }
+                }
+            }
+            .user 
+            {
+                display: flex;
+                margin-left: 200px;
+                margin-top: 115px;
+                position: absolute;
+                align-items: center;
+                gap: 10px;
+                font-size: 14px;
+                img 
+                {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                span 
+                {
+                    font-weight: bold;
+                }
+                .edit 
+                {
+                    display: flex;
+                    gap: 5px;
+                    img 
+                    {
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}   

@@ -1,0 +1,168 @@
+
+.Reviews 
+{
+    color: white;
+    overflow-x: 'hidden';
+  
+    .titlewrap 
+    {
+
+        text-align: center;
+        h1 
+        {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        button
+        {
+            margin: 5px;
+            background-color: #72487c;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    }
+    .loading
+    {
+        margin: 50px;
+        text-align: center;
+    }
+    .posts 
+    {
+        margin-left: 30px;
+        margin-top: 70px ;
+        overflow: auto;
+        .grid 
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0 -10px; /* Adjust spacing between posts */
+            margin-bottom: 60px;
+        }
+  
+        .post 
+        {
+            width: calc(33.33% - 20px); /* 3 posts per row */
+            margin: 0 10px; /* Adjust spacing between posts */
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            display: flex;
+            .img 
+            {
+                img 
+                {
+                    height: 350px;
+                    width: 270px;
+                    border-radius: 20px;
+                }
+            }
+            .content 
+            {
+                padding: 10px;
+                .link 
+                {
+                    text-decoration: none;
+                    color: white;
+                    h1 
+                    {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+    
+                p 
+                {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    color: rgb(172, 172, 172);
+                }
+
+                button 
+                {
+                    background-color: #57385f;
+                    color: #fff;
+                    border: none;
+                    padding: 5px 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 812px) 
+    {
+        .posts 
+        {
+            margin-left: 30px;
+            margin-top: 120px ;
+    
+            //overflow-x: hidden;
+
+            .grid 
+            {
+                width: 50vh;
+                display: flex;
+                //align-items: center;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 0 0px; /* Adjust spacing between posts */
+                margin-bottom: 60px;
+    
+            }
+    
+            .post 
+            {
+                width: calc(43.33% ); /* 3 posts per row */
+                margin: 0 5px; /* Adjust spacing between posts */
+                margin-bottom: 20px;
+                border-radius: 15px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+                display: flex;
+                .img 
+                {
+                    img 
+                    {
+                        height: 250px;
+                        width: 200px;
+                        border-radius: 20px;
+                    }
+                }
+        
+                .content 
+                {
+                    padding: 10px;
+                    .link 
+                    {
+                        text-decoration: none;
+                        color: white;
+                        h1 
+                        {
+                            font-size: 20px;
+                            margin-bottom: 10px;
+                        }
+                    }
+            
+                    p 
+                    {
+                        font-size: 16px;
+                        margin-bottom: 10px;
+                        color: rgb(172, 172, 172);
+                    }
+            
+                    button 
+                    {
+                        background-color: #57385f;
+                        color: #fff;
+                        border: none;
+                        padding: 5px 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}  
