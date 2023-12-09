@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Login from "./pages/Login.jsx";
 import Contact from "./pages/Contact.jsx";
-
+import Profile from "./pages/Profile.jsx"
 import "./styles.scss"
 import About from "./pages/About.jsx";
 
@@ -52,6 +52,10 @@ const router = createBrowserRouter ([
       {
         path: "/contact",
         element: <Contact/>
+      },
+      {
+        path: "/profile",
+        element: <Profile/>
       },
     ]
   }, 
