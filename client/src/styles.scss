@@ -267,7 +267,7 @@ body
             position: fixed;
             bottom: 0;
             height: 70px;
-            width: 100%;
+            width: calc(100% - 54px);
             padding: 20px;
             background-color: #564E58;
             display: flex;
